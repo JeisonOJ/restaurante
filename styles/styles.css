@@ -18,6 +18,7 @@
 
 body {
   min-height: 100vh;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -69,13 +70,12 @@ a {
 }
 
 .navbar-mobile {
-    display: none;
+  display: none;
 }
 
 /*BANNER*/
 
 .banner {
-    
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(
@@ -88,51 +88,55 @@ a {
   align-items: center;
 }
 
-.banner .banner-cont{
-    width: fit-content;
+.banner .banner-cont {
+  width: fit-content;
 }
 
-.banner .banner-cont h3{
-    font-size: 40px;
-    color: var(--light);
-} 
-.banner .banner-cont h2{
-    font-size: 90px;
-    color: var(--light);
+.banner .banner-cont h3 {
+  font-size: 40px;
+  color: var(--light);
+}
+.banner .banner-cont h2 {
+  font-size: 90px;
+  color: var(--light);
 }
 
-.banner .banner-cont p{
-    color: #989898;
-    font-size: 18px;
-    width: 600px;
-    margin-bottom:40px;
+.banner .banner-cont p {
+  color: #989898;
+  font-size: 18px;
+  width: 600px;
+  margin-bottom: 40px;
 }
 .banner .banner-cont .btn-home {
-    background: #ff2e02;
-    padding: 10px 30px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    color: var(--light);
-    border-radius: 6px;
-    font-size: 20px;
-    border: 2px solid #ff2e02;
-    transition: 0.3s;
+  background: #ff2e02;
+  padding: 10px 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--light);
+  border-radius: 6px;
+  font-size: 20px;
+  border: 2px solid #ff2e02;
+  transition: 0.3s;
 }
 
-.banner .banner-cont .btn-home:hover{
-    background: transparent;
-    color: #ff2e02;    
+.banner .banner-cont .btn-home:hover {
+  background: transparent;
+  color: #ff2e02;
 }
 
-.banner .banner-img img{
-    max-width: 700px;
-    width: 95%;
-    margin-top: 100px;
-    animation: animation-img-banner 20s linear infinite;
+.banner .banner-img img {
+  max-width: 700px;
+  width: 80%;
+  margin-top: 100px;
+  animation: animation-img-banner 20s linear infinite;
 }
 
 /*Moviles revisamos de 768px hacia abajo*/
 @media (max-width: 768px) {
+  body {
+    overflow: scroll;
+  }
+
   .header {
     justify-content: center;
     align-items: center;
@@ -155,13 +159,13 @@ a {
     z-index: 200;
   }
 
-  .navbar-mobile a{
+  .navbar-mobile a {
     height: 40px;
     width: 40px;
     border-radius: 50%;
     padding: 10px;
     background: var(--dark);
-    border:2px solid var(--dark);
+    border: 2px solid var(--dark);
     color: var(--primary);
     font-weight: bold;
     font-size: 18px;
@@ -170,10 +174,9 @@ a {
     align-items: center;
   }
 
-  .navbar-mobile a:hover{
+  .navbar-mobile a:hover {
     background: var(--primary);
     color: var(--dark);
-
   }
 
   .banner {
@@ -186,24 +189,24 @@ a {
     overflow: hidden;
   }
 
-  .banner .banner-cont h3{
+  .banner .banner-cont h3 {
     font-size: 30px;
     margin-top: 30px;
   }
 
-  .banner .banner-cont h2{
+  .banner .banner-cont h2 {
     font-size: 50px;
   }
 
-  .banner .banner-cont p{
+  .banner .banner-cont p {
     width: auto;
   }
 
-  .banner .banner-cont{
+  .banner .banner-cont {
     width: 100%;
     padding: 20px;
   }
-  .banner .banner-img{
+  .banner .banner-img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +215,7 @@ a {
 }
 
 @keyframes animation-img-banner {
-    100%{
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
