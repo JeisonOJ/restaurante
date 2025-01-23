@@ -37,6 +37,28 @@
       </nav>
       <div></div>
     </header>
+    <!-- Dark Overlay -->
+    <div id="overlay"></div>
+    <div id="orderForm">
+      <button id="closeButton" title="Close">&times;</button>
+      <h2>Place Your Order</h2>
+      <form id="orderDetailsForm">
+        <input type="text" id="name" placeholder="Your Name" required /><br />
+        <input
+          type="text"
+          id="order"
+          placeholder="What would you like?"
+          required
+        /><br />
+        <input
+          type="text"
+          id="address"
+          placeholder="Your Address"
+          required
+        /><br />
+        <button type="submit">Submit Order</button>
+      </form>
+    </div>
     <!-- social media mobile -->
     <section class="navbar-mobile">
       <a href="tel:+573126403110"><i class="bx bx-phone"></i></a>
@@ -62,11 +84,12 @@
           because great food should always be within reach. Order now and let us
           handle the rest!
         </p>
-        <a href="#" class="btn-home">Order Now!</a>
+        <a href="#" class="btn-home" id="orderNowButton">Order Now!</a>
       </div>
       <div class="banner-img">
         <img src="img-20231101T113534Z-001/img/pizza.webp" alt="Pizza image" />
       </div>
     </section>
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Marck+Script&display=swap");
 
-/*Escritorio revisamos de 1366px en adelante*/
-
 :root {
   --primary: rgb(242, 178, 46);
   --success: rgb(255, 184, 77);
@@ -19,7 +17,61 @@
 body {
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
 }
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
+  display: none; 
+  z-index: 5;
+}
+
+#orderForm {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#closeButton {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+}
+
+#closeButton:hover {
+  color: black;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
@@ -27,7 +79,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: fixed; /*ya que se puso esto, especificamos las coordenadas*/
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -60,7 +112,7 @@ a {
   color: var(--primary);
   font-size: 20px;
   margin-right: 10px;
-  transition: 0.5s, all; /*el all es para transition para todo bakcground, etc*/
+  transition: 0.5s, all; 
 }
 
 .header .nav-bar a:hover {
@@ -72,8 +124,6 @@ a {
 .navbar-mobile {
   display: none;
 }
-
-/*BANNER*/
 
 .banner {
   height: 100vh;
@@ -131,7 +181,6 @@ a {
   animation: animation-img-banner 20s linear infinite;
 }
 
-/*Moviles revisamos de 768px hacia abajo*/
 @media (max-width: 768px) {
   body {
     overflow: scroll;
